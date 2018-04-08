@@ -4,8 +4,8 @@
              xmlns:local="clr-namespace:App01_ConsultarCEP"
              x:Class="App01_ConsultarCEP.MainPage">
     <StackLayout BackgroundColor="#FFBF00" Padding="30" Spacing="30">
-        <Image Source="LogoCorreios.png" />
-        <Entry Placeholder="Digite o cep" PlaceholderColor="#FFBF00" BackgroundColor="#FFFFFF" x:Name="CEP"/>
+        <Image Source="LogoCorreios.png" WidthRequest="100"/>
+        <Entry Placeholder="Digite o cep" PlaceholderColor="#FFBF00" BackgroundColor="#FFFFFF" Keyboard="Numeric" x:Name="CEP"/>
         <Button Text="BUSCAR CEP" TextColor="#FFFFFF" BackgroundColor="#OO416B" x:Name="BOTAO"/>
 
         <Label Text="" x:Name="RESULTADO"
