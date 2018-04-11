@@ -16,5 +16,13 @@ namespace App02_TipoPaginaXF.TipoPagina.Navigation
 		{
 			InitializeComponent ();
 		}
-	}
+        private void FecharModal(object sender, EventArgs args)
+        {
+            /*Navigation.PopAsync();*/// voltar
+            /*Navigation.PopToRootAsync(); */// voltar inicio
+            Navigation.PopModalAsync();
+        }
+    }
+
+    
 }
