@@ -34,10 +34,5 @@ namespace App01_LayoutXF
         {
             Navigation.PushAsync(new Layouts.Scroll.ScrollPage());
         }
-
-
-
-
-
     }
 }
