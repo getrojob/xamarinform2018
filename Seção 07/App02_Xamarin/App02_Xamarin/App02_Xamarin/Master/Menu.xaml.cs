@@ -16,13 +16,16 @@ namespace App02_Xamarin.Master
 		{
 			InitializeComponent ();
 		}
-        private void GopPaginaPerfil1(object sender, EventArgs args)
+        private void GoPaginaPerfil1(object sender, EventArgs args)
         {
-            Navigation.PushAsync(new Pages.Perfil1());
+            Detail = new NavigationPage(new Pages.Perfil1());
+            IsPresented = false; //esconde menu
         }
-        private void GopPaginaXamarin(object sender, EventArgs args)
+
+        private void GoPaginaXamarin(object sender, EventArgs args)
         {
-            Navigation.PushAsync(new Pages.Xamarin());
+            Detail = new NavigationPage(new Pages.Xamarin());
+            IsPresented = false; //esconde menu
         }
 
     }

@@ -12,10 +12,10 @@
                     <Image Source="Logo.png" HorizontalOptions="Center" VerticalOptions="Center"/>
                 </StackLayout>
                 <StackLayout Spacing="5">
-                    <Button Text="Miguel Passos" FontSize="15" TextColor="White" BackgroundColor="Transparent" Clicked="GopPaginaPerfil1"/>
+                    <Button Text="Miguel Passos" FontSize="15" TextColor="White" BackgroundColor="Transparent" Clicked="GoPaginaPerfil1"/>
                     <Button Text="Cecilia Passos" FontSize="15" TextColor="White" BackgroundColor="Transparent" />
                     <Button Text="Gustavo Passos" FontSize="15" TextColor="White" BackgroundColor="Transparent" />
-                    <Button Text="Sobre a Xamarin" FontSize="15" TextColor="White" BackgroundColor="Transparent" Clicked="GopPaginaXamarin"/>
+                    <Button Text="Sobre a Xamarin" FontSize="15" TextColor="White" BackgroundColor="Transparent" Clicked="GoPaginaXamarin"/>
                 </StackLayout>
             </StackLayout>
         </ContentPage>
