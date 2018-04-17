@@ -16,5 +16,22 @@ namespace App01_ControleXF.Menu
 		{
 			InitializeComponent ();
 		}
-	}
+        private void GoActivityIndicatorPage(object sender, EventArgs args)
+        {
+            Detail = new Controles.ActivictyIndicatorPage();
+        }
+        private void GoProgressBarPage(object sender, EventArgs args)
+        {
+            Detail = new Controles.ProgressBarPage();
+        }
+        private void GoBoxViewPage(object sender, EventArgs args)
+        {
+            Detail = new Controles.BoxViewPage();
+        }
+        private void GoLabelPage(object sender, EventArgs args)
+        {
+            Detail = new Controles.LabelPage();
+        }
+
+    }
 }

@@ -6,7 +6,10 @@
     <MasterDetailPage.Master>
         <ContentPage Title="Menu">
             <StackLayout>
-                <!-- <Button /> -->
+                <Button Text="Activity Indicator" Clicked="GoActivityIndicatorPage" />
+                <Button Text="Progress Bar" Clicked="GoProgressBarPage" />
+                <Button Text="BoxView" Clicked="GoBoxViewPage" />
+                <Button Text="Label" Clicked="GoLabelPage" />
             </StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>
