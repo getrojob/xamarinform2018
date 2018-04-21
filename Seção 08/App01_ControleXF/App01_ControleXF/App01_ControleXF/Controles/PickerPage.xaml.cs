@@ -10,17 +10,17 @@ using Xamarin.Forms.Xaml;
 namespace App01_ControleXF.Controles
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class ProgressBarPage : ContentPage
+	public partial class PickerPage : ContentPage
 	{
-		public ProgressBarPage ()
+		public PickerPage ()
 		{
 			InitializeComponent ();
 		}
-        private void Modificar(object sender, EventArgs args)
+
+        private void ActionMudarIndex(object sender, EventArgs args)
         {
-            Bar1.Progress = 1;
-            Bar2.ProgressTo(1, 5000, Easing.Linear);
-            Bar3.ProgressTo(1, 5000, Easing.SpringIn);
+            Picker obj = (Picker)sender;
+            Resultado.Text = obj.SelectedItem.ToString() + " - " + obj.SelectedIndex.ToString();
         }
 
     }

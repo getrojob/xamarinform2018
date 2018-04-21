@@ -10,17 +10,16 @@ using Xamarin.Forms.Xaml;
 namespace App01_ControleXF.Controles
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class ProgressBarPage : ContentPage
+	public partial class DatePickerPage : ContentPage
 	{
-		public ProgressBarPage ()
+		public DatePickerPage ()
 		{
 			InitializeComponent ();
 		}
-        private void Modificar(object sender, EventArgs args)
+
+        private void ActionDateSelected(object sender, DateChangedEventArgs args)
         {
-            Bar1.Progress = 1;
-            Bar2.ProgressTo(1, 5000, Easing.Linear);
-            Bar3.ProgressTo(1, 5000, Easing.SpringIn);
+            LblResultado.Text = args.OldDate.ToString("dd/MM/yyyy") + " > " +args.NewDate.ToString("dd/MM/yyyy");
         }
 
     }

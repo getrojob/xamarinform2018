@@ -6,10 +6,12 @@
         <StackLayout>
             <Label Text="Welcome to Xamarin.Forms! Welcome to Xamarin.Forms! Welcome to Xamarin.Forms! Welcome to Xamarin.Forms!"
                    TextColor="White"
-                   BackgroundColor="Black"
-                   FontAttributes="Italic"
                    FontSize="24"
+                   FontAttributes="Italic"
                    LineBreakMode="WordWrap"
+                   
+                   
+                BackgroundColor="Black"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>

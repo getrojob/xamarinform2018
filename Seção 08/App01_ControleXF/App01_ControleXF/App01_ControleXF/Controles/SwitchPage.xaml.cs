@@ -10,17 +10,16 @@ using Xamarin.Forms.Xaml;
 namespace App01_ControleXF.Controles
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class ProgressBarPage : ContentPage
+	public partial class SwitchPage : ContentPage
 	{
-		public ProgressBarPage ()
+		public SwitchPage ()
 		{
 			InitializeComponent ();
 		}
-        private void Modificar(object sender, EventArgs args)
+
+        private void ActionTrocou(object sender, ToggledEventArgs args)
         {
-            Bar1.Progress = 1;
-            Bar2.ProgressTo(1, 5000, Easing.Linear);
-            Bar3.ProgressTo(1, 5000, Easing.SpringIn);
+            Resultado.Text = DateTime.Now.ToString("HH:mm") + " - " + args.Value;
         }
 
     }

@@ -1,0 +1,31 @@
+Unhandled Exception: System.ServiceModel.FaultException`1[[Microsoft.Xrm.Sdk.OrganizationServiceFault, Microsoft.Xrm.Sdk, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]: System.Xml.XmlException: Microsoft Dynamics CRM has experienced an error. Reference number for administrators or support: #368E4DE3Detail: 
+<OrganizationServiceFault xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/xrm/2011/Contracts">
+  <ErrorCode>-2147220970</ErrorCode>
+  <ErrorDetails xmlns:d2p1="http://schemas.datacontract.org/2004/07/System.Collections.Generic">
+    <KeyValuePairOfstringanyType>
+      <d2p1:key>CallStack</d2p1:key>
+      <d2p1:value xmlns:d4p1="http://www.w3.org/2001/XMLSchema" i:type="d4p1:string">   at Microsoft.Crm.Core.Application.WebServices.AppGridWebServiceHandler.ProcessRequestInternal(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)</d2p1:value>
+    </KeyValuePairOfstringanyType>
+  </ErrorDetails>
+  <Message>System.Xml.XmlException: Microsoft Dynamics CRM has experienced an error. Reference number for administrators or support: #368E4DE3</Message>
+  <Timestamp>2018-04-20T17:01:27.8828604Z</Timestamp>
+  <InnerFault>
+    <ErrorCode>-2147220970</ErrorCode>
+    <ErrorDetails xmlns:d3p1="http://schemas.datacontract.org/2004/07/System.Collections.Generic">
+      <KeyValuePairOfstringanyType>
+        <d3p1:key>CallStack</d3p1:key>
+        <d3p1:value xmlns:d5p1="http://www.w3.org/2001/XMLSchema" i:type="d5p1:string">   at Microsoft.Crm.Core.Application.WebServices.AppGridWebServiceHandler.GetGridDataProvider(String gridXml)
+   at Microsoft.Crm.Core.Application.WebServices.AppGridWebServiceHandler.Refresh(String gridXml, StringBuilder sbXml, StringBuilder sbHtml, Boolean returnJsonData)
+   at Microsoft.Crm.Core.Application.WebServices.AppGridWebServiceHandler.ProcessRequestInternal(HttpContext context)</d3p1:value>
+      </KeyValuePairOfstringanyType>
+    </ErrorDetails>
+    <Message>System.NullReferenceException: Microsoft Dynamics CRM has experienced an error. Reference number for administrators or support: #916D2291</Message>
+    <Timestamp>2018-04-20T17:01:27.8828604Z</Timestamp>
+    <InnerFault i:nil="true" />
+    <TraceText i:nil="true" />
+  </InnerFault>
+  <TraceText i:nil="true" />
+</OrganizationServiceFault>
+
