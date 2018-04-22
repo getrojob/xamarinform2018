@@ -20,6 +20,7 @@ namespace App01_ControleXF.Controles
         private void ActionMudarIndex(object sender, EventArgs args)
         {
             Picker obj = (Picker)sender;
+            // exibe a selação com seu respectivo index.
             Resultado.Text = obj.SelectedItem.ToString() + " - " + obj.SelectedIndex.ToString();
         }
 

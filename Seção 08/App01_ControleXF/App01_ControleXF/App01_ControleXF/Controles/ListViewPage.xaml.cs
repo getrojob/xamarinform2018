@@ -17,7 +17,9 @@ namespace App01_ControleXF.Controles
 		{
 			InitializeComponent ();
             
-            List<Pessoa> lista = new List<Pessoa>();
+            List<Pessoa> lista = new List<Pessoa>(); // cria a lista de registros
+
+
             lista.Add(new Pessoa { Nome = "José", Idade="20" });
             lista.Add(new Pessoa { Nome = "Felipe", Idade = "22" });
             lista.Add(new Pessoa { Nome = "Maria", Idade = "22" });
