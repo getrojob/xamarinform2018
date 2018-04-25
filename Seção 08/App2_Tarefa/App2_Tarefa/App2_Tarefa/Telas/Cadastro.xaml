@@ -3,9 +3,57 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App2_Tarefa.Telas.Cadastro">
     <ContentPage.Content>
-        <StackLayout>
-            
-            
+        <StackLayout Padding="20">
+            <Label Text="Nome" FontAttributes="Bold"/>
+            <Entry x:Name="TxNome" />
+            <Label Text="Prioridade" FontAttributes="Bold" />
+            <StackLayout x:Name="SLPrioridade">
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Image>
+                        <Image.Source>
+                            <OnPlatform x:TypeArguments="ImageSource">
+                                <On Platform="Android, iOS" Value="4.png" />
+                                <On Platform="UWP" Value="Resources/4.png"/>
+                            </OnPlatform>
+                        </Image.Source>
+                    </Image>
+                    <Label Text="Urgente e importante" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Image>
+                        <Image.Source>
+                            <OnPlatform x:TypeArguments="ImageSource">
+                                <On Platform="Android, iOS" Value="3.png" />
+                                <On Platform="UWP" Value="Resources/3.png"/>
+                            </OnPlatform>
+                        </Image.Source>
+                    </Image>
+                    <Label Text="Urgente e não importante" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Image>
+                        <Image.Source>
+                            <OnPlatform x:TypeArguments="ImageSource">
+                                <On Platform="Android, iOS" Value="2.png" />
+                                <On Platform="UWP" Value="Resources/2.png"/>
+                            </OnPlatform>
+                        </Image.Source>
+                    </Image>
+                    <Label Text="Não urgente e importante" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Image>
+                        <Image.Source>
+                            <OnPlatform x:TypeArguments="ImageSource">
+                                <On Platform="Android, iOS" Value="1.png" />
+                                <On Platform="UWP" Value="Resources/1.png"/>
+                            </OnPlatform>
+                        </Image.Source>
+                    </Image>
+                    <Label Text="Não urgente e não importante" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+            </StackLayout>
+            <Button Text="OK" HorizontalOptions="End" TextColor="White" BackgroundColor="Blue"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
