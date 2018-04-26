@@ -6,11 +6,12 @@ namespace App2_Tarefa.Modelos
 {
     public class GerenciadorTarefa
     {
-
+        // Propriedade lista
         private List<Tarefa> Lista { get; set; }
 
         public void Salvar(Tarefa tarefa)
         {
+            // add de itens na lista
             Lista.Add(tarefa);
             SalvarNoProperties(Lista);
 

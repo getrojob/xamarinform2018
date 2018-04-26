@@ -129,13 +129,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\2.png" />
+    <BundleResource Include="Resources\i2.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\3.png" />
+    <BundleResource Include="Resources\i3.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\4.png" />
+    <BundleResource Include="Resources\i4.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\AddBotao.png" />
@@ -150,6 +150,6 @@
     <BundleResource Include="Resources\Delete.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\1.png" />
+    <BundleResource Include="Resources\i1.png" />
   </ItemGroup>
 </Project>
