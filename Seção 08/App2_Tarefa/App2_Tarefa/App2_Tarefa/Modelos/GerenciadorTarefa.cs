@@ -12,18 +12,20 @@ namespace App2_Tarefa.Modelos
         public void Salvar(Tarefa tarefa)
         {
             // add de itens na lista
+            Lista = Listagem();
             Lista.Add(tarefa);
             SalvarNoProperties(Lista);
 
         }
         public void Deletar(Tarefa tarefa)
         {
+            Lista = Listagem();
             Lista.Remove(tarefa);
         }
         public void Finalizar(int index, Tarefa tarefa)
         {
+            Lista = Listagem();
             Lista.RemoveAt(index);
-
 
             Lista.Add(tarefa);
             SalvarNoProperties(Lista);
