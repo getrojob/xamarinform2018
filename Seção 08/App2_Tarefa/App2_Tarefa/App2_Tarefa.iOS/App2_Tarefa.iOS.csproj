@@ -119,6 +119,9 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>11.0.2</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.280555" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
@@ -129,13 +132,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\i2.png" />
+    <BundleResource Include="Resources\p2.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\i3.png" />
+    <BundleResource Include="Resources\p3.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\i4.png" />
+    <BundleResource Include="Resources\p4.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\AddBotao.png" />
@@ -150,6 +153,6 @@
     <BundleResource Include="Resources\Delete.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\i1.png" />
+    <BundleResource Include="Resources\p1.png" />
   </ItemGroup>
 </Project>
