@@ -1,16 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App1_Cell.Pagina.TextCellPage">
+             x:Class="App1_Cell.Pagina.ImageCellPage">
     <ContentPage.Content>
-        <ListView x:Name="ListaFuncionario">
+        <StackLayout  Padding="15, 5, 15, 5" Orientation="Horizontal">
+            <ListView x:Name="ListaFuncionario"  HeightRequest="20" >
             <ListView.ItemTemplate>
+                
                 <DataTemplate>
-                    <TextCell Text="{Binding Nome}" Detail="{Binding Cargo}" >
-                      <!-- Propriedades do TextCell: TextColor="" DetailColor=""-->
-                    </TextCell>
+                        <ImageCell Text="{Binding Nome}" Detail="{Binding Cargo}" ImageSource="{Binding Foto}"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
