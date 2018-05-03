@@ -36,5 +36,15 @@ namespace App1_Cell.Menu
             Detail = new NavigationPage(new Pagina.SwitchCellPage());
             IsPresented = false;
         }
+        public void GoPagina5(object sender, EventArgs args)
+        {
+            Detail = new NavigationPage(new Pagina.ViewCellPage());
+            IsPresented = false;
+        }
+        public void GoPagina6(object sender, EventArgs args)
+        {
+            Detail = new NavigationPage(new Pagina.ListViewPage());
+            IsPresented = false;
+        }
     }
 }

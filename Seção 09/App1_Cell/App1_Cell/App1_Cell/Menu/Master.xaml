@@ -11,6 +11,9 @@
                 <Button Text="ImageCell" Clicked="GoPagina2"/>
                 <Button Text="EntryCell" Clicked="GoPagina3"/>
                 <Button Text="SwitchCell" Clicked="GoPagina4"/>
+                <Button Text="ViewCell" Clicked="GoPagina5"/>
+                <Label Text="Componentes"/>
+                <Button Text="ListView" Clicked="GoPagina6"/>
             </StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>
