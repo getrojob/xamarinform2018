@@ -7,7 +7,10 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <TextCell Text="{Binding Nome}" Detail="{Binding Cargo}" >
-                        <!-- Propriedades do TextCell: TextColor="" DetailColor=""-->
+                        <TextCell.ContextActions>
+                            <MenuItem Text="Ferias" Clicked="FeriasAction" CommandParameter="{Binding .}"/>
+                            <MenuItem Text="Abono" Clicked="AbonoAction" CommandParameter="{Binding .}"/>
+                        </TextCell.ContextActions>
                     </TextCell>
                 </DataTemplate>
             </ListView.ItemTemplate>

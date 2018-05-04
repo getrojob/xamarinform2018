@@ -6,14 +6,15 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+
 using App1_Cell.Modelo;
 
 namespace App1_Cell.Pagina
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class ListViewPage : ContentPage
+	public partial class ListViewButtonPage : ContentPage
 	{
-		public ListViewPage ()
+		public ListViewButtonPage ()
 		{
 			InitializeComponent ();
 
@@ -25,27 +26,16 @@ namespace App1_Cell.Pagina
             Lista.Add(new Funcionario() { Nome = "João", Cargo = "Vendedor" });
 
             ListaFuncionario.ItemsSource = Lista;
-        }
 
-        private void ItemSelecionadoAction(object sender, SelectedItemChangedEventArgs args)
-        {
-            Funcionario func = (Funcionario) args.SelectedItem;
-
-            Navigation.PushAsync(new Detalhe.DetailPage(func));
         }
         private void FeriasAction(object sender, EventArgs args)
         {
-            MenuItem botao = (MenuItem)sender;
-            Funcionario func = (Funcionario)botao.CommandParameter;
+            Button btnFerias = (Button)sender;
+            Funcionario func = (Funcionario)btnFerias.CommandParameter;
 
-            DisplayAlert("Titulo: "+ func.Nome, "Mensagem: " + func.Nome + " - " + func.Cargo, "OK");
+            DisplayAlert("Ferias", "Funcionario: " + func.Nome, "OK");
         }
-        private void AbonoAction(object sender, EventArgs args)
-        {
-            MenuItem botao = (MenuItem)sender;
-            Funcionario func = (Funcionario)botao.CommandParameter;
 
-            DisplayAlert("Titulo: "+ func.Nome, "Mensagem: " + func.Nome + " - " + func.Cargo, "OK");
-        }
+
     }
 }
