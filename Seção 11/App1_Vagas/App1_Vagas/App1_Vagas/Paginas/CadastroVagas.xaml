@@ -18,7 +18,7 @@
                 <Label Text="PJ" />
             </StackLayout>
             <Entry Placeholder="Telefone"/>
-            <Entry PlaceHolder="Email"/>
+            <Entry Placeholder="Email"/>
             <Button Text="Salvar"/>
         </StackLayout>
     </ContentPage.Content>
