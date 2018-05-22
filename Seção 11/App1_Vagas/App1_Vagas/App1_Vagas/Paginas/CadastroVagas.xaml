@@ -4,9 +4,22 @@
              x:Class="App1_Vagas.Paginas.CadastroVagas">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Entry Placeholder="Vaga" />
+            <Entry Placeholder="Empresa"/>
+            <Entry Placeholder="Quantidade" />
+            <Entry Placeholder="Cidade"/>
+            <Entry Placeholder="Salario"/>
+            <Label Text="Descrição do Cargo"/>
+            <Editor HeightRequest="200"/>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Tipo de contratação"/>
+                <Label Text="CLT"/>
+                <Switch/>
+                <Label Text="PJ" />
+            </StackLayout>
+            <Entry Placeholder="Telefone"/>
+            <Entry PlaceHolder="Email"/>
+            <Button Text="Salvar"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

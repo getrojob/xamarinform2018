@@ -26,9 +26,9 @@
                             <Label Grid.Column="0" Text="{Binding NomeVagas}" FontAttributes="Bold"/>
                             <Label Grid.Column="0" Text="{Binding Empresa}"/>
                             <Label Grid.Column="0" Text="{Binding Cidade}"/>
-                            <Label Text="+Detalhe">
+                            <Label Text="+Detalhe"  Grid.Column="1">
                                 <Label.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="MaisDetalheAction" CommandParameter="{Binding .}"
+                                    <TapGestureRecognizer Tapped="MaisDetalheAction" CommandParameter="{Binding .}" />
                                 </Label.GestureRecognizers>
                             </Label>
                         </Grid>
