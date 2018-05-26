@@ -23,20 +23,16 @@ namespace App1_Vagas.Banco
 
         public List<Vaga> Consultar()
         {
-            
             return _conexao.Table<Vaga>().ToList();
         }
         public List<Vaga> Pesquisar(string palavra)
         {
-
-            return _conexao.Table<Vaga>().Where(a=>a.NomeVagas.Contains(palavra)).ToList();
+            return _conexao.Table<Vaga>().Where(a=>a.NomeVaga.Contains(palavra)).ToList();
         }
-
         public Vaga ObterVagaPorId(int id)
         {
             return _conexao.Table<Vaga>().Where(a=>a.Id == id).FirstOrDefault();
         }
-
         public void Cadastro(Vaga vaga)
         {
             _conexao.Insert(vaga);
@@ -44,7 +40,7 @@ namespace App1_Vagas.Banco
         public void Atualizacao(Vaga vaga)
         {
             _conexao.Update(vaga);
-        } 
+        }
         public void Exclusao(Vaga vaga)
         {
             _conexao.Delete(vaga);

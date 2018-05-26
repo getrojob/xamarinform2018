@@ -10,7 +10,7 @@ using System.IO;
 using App1_Vagas.UWP.Banco;
 using Windows.Storage;
 
-[assembly: Dependency(typeof(Caminho))]
+[assembly:Dependency(typeof(Caminho))]
 namespace App1_Vagas.UWP.Banco
 {
     public class Caminho : ICaminho

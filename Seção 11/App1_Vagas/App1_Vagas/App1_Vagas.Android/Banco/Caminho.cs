@@ -14,7 +14,6 @@ using App1_Vagas.Banco;
 using System.IO;
 using App1_Vagas.Droid.Banco;
 
-
 [assembly:Dependency(typeof(Caminho))]
 namespace App1_Vagas.Droid.Banco
 {
@@ -27,7 +26,6 @@ namespace App1_Vagas.Droid.Banco
             string caminhoBanco = Path.Combine(caminhoDaPasta, NomeArquivoBanco);
 
             return caminhoBanco;
-
         }
     }
 }

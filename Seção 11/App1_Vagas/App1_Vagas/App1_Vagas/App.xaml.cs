@@ -1,8 +1,10 @@
-using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
-[assembly: XamlCompilation (XamlCompilationOptions.Compile)]
+using Xamarin.Forms;
+
 namespace App1_Vagas
 {
 	public partial class App : Application
@@ -11,7 +13,7 @@ namespace App1_Vagas
 		{
 			InitializeComponent();
 
-			MainPage = new NavigationPage( new App1_Vagas.Paginas.CadastroVagas() );
+			MainPage = new NavigationPage( new App1_Vagas.Paginas.ConsultarVagas() );
 		}
 
 		protected override void OnStart ()
