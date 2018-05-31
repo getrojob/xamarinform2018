@@ -26,7 +26,6 @@ namespace App02_TipoPaginaXF.Droid
 		
 		public static void UpdateIdValues()
 		{
-			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::App02_TipoPaginaXF.Droid.Resource.Attribute.actionBarSize;
 		}
 		
 		public partial class Animation

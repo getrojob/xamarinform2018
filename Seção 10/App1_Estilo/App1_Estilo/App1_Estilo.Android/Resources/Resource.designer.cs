@@ -26,7 +26,6 @@ namespace App1_Estilo.Droid
 		
 		public static void UpdateIdValues()
 		{
-			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::App1_Estilo.Droid.Resource.Attribute.actionBarSize;
 		}
 		
 		public partial class Animation

@@ -26,7 +26,6 @@ namespace App01_ControleXF.Droid
 		
 		public static void UpdateIdValues()
 		{
-			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::App01_ControleXF.Droid.Resource.Attribute.actionBarSize;
 		}
 		
 		public partial class Animation
