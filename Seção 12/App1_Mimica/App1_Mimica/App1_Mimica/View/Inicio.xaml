@@ -5,7 +5,8 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Nome de Grupo 1" />
-            <Entry Placeholder="(Opcional1)"/>
+            <Entry Placeholder="(Opcional1)" Text="{Binding NomeGrupo1}"/>
+            <Label Text="{Binding NomeGrupo1}"/>
             <Label Text="Nome de Grupo 2" />
             <Entry Placeholder="(Opcional2)"/>
             <Label Text="Nível" />
@@ -16,7 +17,7 @@
                     <x:String>Médio</x:String>
                     <x:String>Difícil</x:String>
                 </Picker.Items>
-            </Picker>/>
+            </Picker>
             <Label Text="Tempo de cada palavra(seg)" />
             <Entry Text="120"/>
             <Label Text="Rodadas" />
