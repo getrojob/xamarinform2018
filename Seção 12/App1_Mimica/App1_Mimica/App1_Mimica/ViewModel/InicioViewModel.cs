@@ -4,6 +4,7 @@ using System.Text;
 using App1_Mimica.Model;
 using Xamarin.Forms;
 using System.ComponentModel;
+using App1_Mimica.Armazenamento;
 
 namespace App1_Mimica.ViewModel
 {
@@ -19,6 +20,8 @@ namespace App1_Mimica.ViewModel
 
         private void IniciarJogo()
         {
+            Armazenamento.Armazenamento.Jogo = this.Jogo;
+            Armazenamento.Armazenamento.RodadaAtual = 1;
             App.Current.MainPage = new View.Jogo();
         }
         public event PropertyChangedEventHandler PropertyChanged;
