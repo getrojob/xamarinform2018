@@ -1,9 +1,10 @@
-using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-using App1_Mimica.View;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
-[assembly: XamlCompilation (XamlCompilationOptions.Compile)]
+using Xamarin.Forms;
+
 namespace App1_Mimica
 {
 	public partial class App : Application
@@ -12,7 +13,7 @@ namespace App1_Mimica
 		{
 			InitializeComponent();
 
-			MainPage = new Inicio();
+			MainPage = new App1_Mimica.View.Inicio();
 		}
 
 		protected override void OnStart ()
