@@ -21,7 +21,7 @@ namespace App1_NossoChat.Service
              */
             FormUrlEncodedContent param = new FormUrlEncodedContent(new[] {
                 new KeyValuePair<string, string>("nome", usuario.nome),
-                new KeyValuePair<string, string>("nome", usuario.password)
+                new KeyValuePair<string, string>("password", usuario.password)
             });
 
             HttpClient requisicao = new HttpClient();
@@ -29,8 +29,8 @@ namespace App1_NossoChat.Service
 
             if(resposta.StatusCode == HttpStatusCode.OK)
             {
-                //TODO - Deserializar, retonar no met e Salvar como login
-
+                var conteudo = resposta.Content.ReadAsStringAsync().GetAwaiter().GetResult();
+                return JsonConvert.DeserializeObject<Usuario>(conteudo);
             }
 
             return null;
@@ -111,19 +111,7 @@ namespace App1_NossoChat.Service
             }
             return false;
         }
-        public static bool GetMensagemChat(Chat chat)
-        {
-            var URL = EndererecoBase + "/chat/delete" + chat.id;
 
-            HttpClient requisicao = new HttpClient();
-            HttpResponseMessage resposta = requisicao.DeleteAsync(URL).GetAwaiter().GetResult();
-
-            if (resposta.StatusCode == HttpStatusCode.OK)
-            {
-                return true;
-            }
-            return false;
-        }
         public static List<Mensagem> GetMensagensChat(Chat chat)
         {
             var URL = EndererecoBase + "/chat/" + chat.id + "/msg";
@@ -164,6 +152,19 @@ namespace App1_NossoChat.Service
 
             return false;
 
+        }
+        public static bool DeleteMensagem(Mensagem mensagem)
+        {
+            var URL = EndererecoBase + "/chat/" + mensagem.id_chat +"/delete/" + mensagem.id;
+
+            HttpClient requisicao = new HttpClient();
+            HttpResponseMessage resposta = requisicao.DeleteAsync(URL).GetAwaiter().GetResult();
+
+            if (resposta.StatusCode == HttpStatusCode.OK)
+            {
+                return true;
+            }
+            return false;
         }
 
     }

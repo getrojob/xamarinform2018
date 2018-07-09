@@ -11,7 +11,7 @@ namespace App1_NossoChat
 		{
 			InitializeComponent();
 
-			MainPage = new MainPage();
+			MainPage = new App1_NossoChat.View.PaginaInicial();
 		}
 
 		protected override void OnStart ()
