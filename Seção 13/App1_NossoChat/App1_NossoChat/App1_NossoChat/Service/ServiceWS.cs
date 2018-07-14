@@ -10,10 +10,10 @@ namespace App1_NossoChat.Service
 {
     public class ServiceWS
     {
-        private static string EndererecoBase = "http://ws.spacedu.com.br/xf2018/rest/api";
+        private static string EnderecoBase = "http://ws.spacedu.com.br/xf2018/rest/api";
         public static Usuario GetUsuario(Usuario usuario)
         {
-            var URL = EndererecoBase + "/usuario";
+            var URL = EnderecoBase + "/usuario";
 
             /* 
              * QueryString
@@ -38,31 +38,33 @@ namespace App1_NossoChat.Service
 
         public static List<Chat> GetChats()
         {
-            var URL = EndererecoBase + "/chats";
+            var URL = EnderecoBase + "/chats";
 
             HttpClient requisicao = new HttpClient();
             HttpResponseMessage resposta = requisicao.GetAsync(URL).GetAwaiter().GetResult();
 
             if (resposta.StatusCode == HttpStatusCode.OK)
             {
-               string conteudo = resposta.Content.ReadAsStringAsync().GetAwaiter().GetResult();
-                if(conteudo.Length > 2)
+                string conteudo = resposta.Content.ReadAsStringAsync().GetAwaiter().GetResult();
+                if (conteudo.Length > 2)
                 {
                     List<Chat> lista = JsonConvert.DeserializeObject<List<Chat>>(conteudo);
+                    return lista;
                 }
                 else
                 {
                     return null;
-                } 
+                }
             }
-            
-            return null;
-            
+            else
+            {
+                return null;
+            }
         }
-        
+
         public static bool InsertChat(Chat chat)
         {
-            var URL = EndererecoBase + "/chat";
+            var URL = EnderecoBase + "/chat";
 
             FormUrlEncodedContent param = new FormUrlEncodedContent(new[] {
                 new KeyValuePair<string, string>("nome", chat.nome),
@@ -81,7 +83,7 @@ namespace App1_NossoChat.Service
         }
         public static bool RenomearChat(Chat chat)
         {
-            var URL = EndererecoBase + "/chat/" + chat.id;
+            var URL = EnderecoBase + "/chat/" + chat.id;
 
             FormUrlEncodedContent param = new FormUrlEncodedContent(new[] {
                 new KeyValuePair<string, string>("nome", chat.nome),
@@ -100,7 +102,7 @@ namespace App1_NossoChat.Service
         }
         public static bool DeleteChat(Chat chat)
         {
-            var URL = EndererecoBase + "/chat/delete" + chat.id;
+            var URL = EnderecoBase + "/chat/delete" + chat.id;
 
             HttpClient requisicao = new HttpClient();
             HttpResponseMessage resposta = requisicao.DeleteAsync(URL).GetAwaiter().GetResult();
@@ -114,7 +116,7 @@ namespace App1_NossoChat.Service
 
         public static List<Mensagem> GetMensagensChat(Chat chat)
         {
-            var URL = EndererecoBase + "/chat/" + chat.id + "/msg";
+            var URL = EnderecoBase + "/chat/" + chat.id + "/msg";
 
             HttpClient requisicao = new HttpClient();
             HttpResponseMessage resposta = requisicao.GetAsync(URL).GetAwaiter().GetResult();
@@ -134,7 +136,7 @@ namespace App1_NossoChat.Service
         }
         public static bool InsertMensagem(Mensagem mensagem)
         {
-            var URL = EndererecoBase + "/chat/" + mensagem.id_chat + "/msg";
+            var URL = EnderecoBase + "/chat/" + mensagem.id_chat + "/msg";
 
             FormUrlEncodedContent param = new FormUrlEncodedContent(new[] {
                 new KeyValuePair<string, string>("mensagem", mensagem.mensagem),
@@ -155,7 +157,7 @@ namespace App1_NossoChat.Service
         }
         public static bool DeleteMensagem(Mensagem mensagem)
         {
-            var URL = EndererecoBase + "/chat/" + mensagem.id_chat +"/delete/" + mensagem.id;
+            var URL = EnderecoBase + "/chat/" + mensagem.id_chat +"/delete/" + mensagem.id;
 
             HttpClient requisicao = new HttpClient();
             HttpResponseMessage resposta = requisicao.DeleteAsync(URL).GetAwaiter().GetResult();
