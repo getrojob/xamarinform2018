@@ -6,5 +6,6 @@ namespace App1_NossoChat.ViewModel
 {
     class MensagemViewModel
     {
+
     }
 }

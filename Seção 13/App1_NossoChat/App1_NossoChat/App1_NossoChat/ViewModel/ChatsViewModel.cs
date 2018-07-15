@@ -43,7 +43,7 @@ namespace App1_NossoChat.ViewModel
             Chats = Chats.OrderBy(a => a.nome).ToList();
         }
 
-        private void Atualizar()
+        public void Atualizar()
         {
             Chats = ServiceWS.GetChats();
         }
