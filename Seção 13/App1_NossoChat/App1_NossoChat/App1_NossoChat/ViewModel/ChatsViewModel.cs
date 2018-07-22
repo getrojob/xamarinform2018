@@ -1,16 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 using System.ComponentModel;
 using App1_NossoChat.Model;
 using App1_NossoChat.Service;
 using Xamarin.Forms;
-using System.Linq;
+
 
 namespace App1_NossoChat.ViewModel
 {
     public class ChatsViewModel : INotifyPropertyChanged
     {
+
+        private Chat _SelectedItemChat;
+        public Chat SelectedItemChat {
+            get { return _SelectedItemChat; }
+            set {
+                _SelectedItemChat = value;
+                OnPropertyChanged("SelectedItemChat");
+                GoPaginaMensagem(value);
+            }
+        }
+
+
+        private void GoPaginaMensagem(Chat chat)
+        {
+            if(chat != null)
+            {
+                SelectedItemChat = null;
+            ((NavigationPage)App.Current.MainPage).Navigation.PushAsync(new View.Mensagem(chat));     
+            }
+        }
+
+
         private List<Chat> _chats;
         public List<Chat> Chats {
             get { return _chats; }
@@ -20,7 +43,10 @@ namespace App1_NossoChat.ViewModel
             }
         }
 
-        public Command AdicionarCommand {get; set;}
+
+
+
+        public Command AdicionarCommand { get; set; }
         public Command OrdenarCommand { get; set; }
         public Command AtualizarCommand { get; set; }
 
